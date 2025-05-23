@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>7.Horizontal Scroll</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .wide-box {
+      white-space: nowrap;
+      width: max-content;
+    }
+    .box {
+      display: inline-block;
+      width: 300px;
+      height: 150px;
+      background-color: #6c757d;
+      color: white;
+      margin-right: 10px;
+      text-align: center;
+      line-height: 150px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container my-5">
+    <h2 class="mb-4 text-center">Horizontal Scroll Using <code>overflow-auto</code></h2>
+
+    <div class="overflow-auto border p-3">
+      <div class="wide-box">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+        <div class="box">Box 6</div>
+        <div class="box">Box 7</div>
+        <div class="box">Box 8</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

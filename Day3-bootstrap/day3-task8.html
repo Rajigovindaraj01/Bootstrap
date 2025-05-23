@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>8.Modal Z-Index Layer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .background-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+      z-index: -1;
+      filter: brightness(0.6);
+    }
+    .content-overlay {
+      position: relative;
+      color: white;
+      text-align: center;
+      padding-top: 15vh;
+      z-index: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background-layer z-n1"></div>
+
+  <div class="content-overlay container">
+    <h1 class="display-3 fw-bold">Welcome to Our Platform</h1>
+    <p class="lead">Experience the next level of user-friendly web applications.</p>
+    <button class="btn btn-outline-light btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#layeredModal">
+      Learn More
+    </button>
+  </div>
+  <div class="modal fade" id="layeredModal" tabindex="-1" aria-labelledby="layeredModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header z-3 bg-primary text-white">
+          <h5 class="modal-title" id="layeredModalLabel">Why Choose Us?</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-body">
+          <p>
+            Our platform offers seamless integration, responsive design, and top-notch security to ensure the best user experience.
+            Whether you're a beginner or a pro, our tools adapt to your needs effortlessly.
+          </p>
+          <ul>
+            <li>Responsive & Mobile Friendly</li>
+            <li>Fast & Lightweight</li>
+            <li>24/7 Customer Support</li>
+            <li>Continuous Updates & Improvements</li>
+          </ul>
+          <p>Join thousands of satisfied users today!</p>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <a href="#" class="btn btn-primary">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
